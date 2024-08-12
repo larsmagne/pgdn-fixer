@@ -1,0 +1,2 @@
+This is a Greasemonkey script (for Firefox) to make the PgUp/PgDn keys
+(an the Up/Down arrow keys) work even if an input field has the focus.
