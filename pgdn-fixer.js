@@ -22,13 +22,14 @@ function pgdnScroller(e, input) {
 
 Array.from(document.querySelectorAll("input,textarea")).forEach(function(input) {
   input.addEventListener("keydown", function(e) {
-    pgdnScroller(e, input);
+    return pgdnScroller(e, input);
   });
 });
 
 document.addEventListener("keydown", function(e) {
   var name = document.activeElement.nodeName;
-  if (name == "INPUT" || name == "TEXTAREA") {
-    pgdnScroller(e, document.activeElement);
-  };
+  if (name == "INPUT" || name == "TEXTAREA")
+    return pgdnScroller(e, document.activeElement);
+  else
+    return true;
 });
